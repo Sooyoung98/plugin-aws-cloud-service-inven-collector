@@ -85,3 +85,8 @@ class TestCloudServiceAPIs(TestCase):
         for res in res_stream:
             self.assertIsNotNone(res)
             print_json(res)
+
+    def test_get_tasks(self):
+        print(f"=================== start get_tasks! ==========================")
+        v_info = self.inventory.Job.get_tasks({"options": {}, "secret_data": {}})
+        print_json(v_info)
