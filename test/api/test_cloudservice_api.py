@@ -88,5 +88,5 @@ class TestCloudServiceAPIs(TestCase):
 
     def test_get_tasks(self):
         print(f"=================== start get_tasks! ==========================")
-        v_info = self.inventory.Job.get_tasks({"options": {}, "secret_data": {}})
+        v_info = self.inventory.Job.get_tasks({"options": {}, "secret_data": self.secret_data})
         print_json(v_info)

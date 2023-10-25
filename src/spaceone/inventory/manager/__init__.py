@@ -30,3 +30,4 @@ from spaceone.inventory.manager.kinesis_data_stream_manager import KinesisDataSt
 from spaceone.inventory.manager.msk_manager import MSKConnectorManager
 from spaceone.inventory.manager.kinesis_firehose_manager import KinesisFirehoseConnectorManager
 from spaceone.inventory.manager.lightsail_manager import LightsailConnectorManager
+from spaceone.inventory.manager.job_manager import JobManager
