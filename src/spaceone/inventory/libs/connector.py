@@ -90,6 +90,11 @@ class AWSConnector(BaseConnector):
         self._client = self.session.client(self.service_name, verify=BOTO3_HTTPS_VERIFIED)
         return self._client
 
+    def get_regions(self):
+        _session = get_session(self.secret_data, DEFAULT_REGION)
+        ec2_client = _session.client('ec2', verify=BOTO3_HTTPS_VERIFIED)
+        return list(map(lambda region_info: region_info.get('RegionName'),
+                        ec2_client.describe_regions().get('Regions')))
     @property
     def session(self):
         return self.init_property('_session', partial(get_session, self.secret_data, self.region_name))

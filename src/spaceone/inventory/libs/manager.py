@@ -36,3 +36,7 @@ class AWSManager(BaseManager):
                          'resource': {'cloud_service_group': connector.cloud_service_group,
                                       'cloud_service_type': connector.cloud_service_type}}
                     )]
+
+    def get_regions(self, **kwargs):
+        connector = self.locator.get_connector('EC2Connector', **kwargs)
+        return connector.get_regions()
