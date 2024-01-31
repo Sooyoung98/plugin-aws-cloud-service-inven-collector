@@ -68,10 +68,8 @@ class CollectorService(BaseService):
             )
         else:
             execute_managers = list(CLOUD_SERVICE_GROUP_MAP.values())
-
         return execute_managers
 
-    @transaction
     @check_required(["options", "secret_data", "filter"])
     def collect(self, params):
         """
@@ -149,6 +147,7 @@ class CollectorService(BaseService):
             f"[collect] TOTAL FINISHED TIME : {time.time() - start_time} Seconds"
         )
         for resource_region in resource_regions:
+            print(resource_region)
             yield resource_region
 
     def get_region_from_result(self, region_code):

@@ -3,7 +3,9 @@ from spaceone.inventory.manager.lambda_manager import LambdaConnectorManager
 from spaceone.inventory.manager.rds_manager import RDSConnectorManager
 from spaceone.inventory.manager.api_gateway_manager import APIGatewayConnectorManager
 from spaceone.inventory.manager.auto_scaling_manager import AutoScalingConnectorManager
-from spaceone.inventory.manager.direct_connect_manager import DirectConnectConnectorManager
+from spaceone.inventory.manager.direct_connect_manager import (
+    DirectConnectConnectorManager,
+)
 from spaceone.inventory.manager.documentdb_manager import DocumentDBConnectorManager
 from spaceone.inventory.manager.ecs_manager import ECSConnectorManager
 from spaceone.inventory.manager.ecr_manager import ECRConnectorManager
@@ -26,7 +28,12 @@ from spaceone.inventory.manager.vpc_manager import VPCConnectorManager
 from spaceone.inventory.manager.ec2_manager import EC2ConnectorManager
 from spaceone.inventory.manager.iam_manager import IAMConnectorManager
 from spaceone.inventory.manager.acm_manager import ACMConnectorManager
-from spaceone.inventory.manager.kinesis_data_stream_manager import KinesisDataStreamConnectorManager
+from spaceone.inventory.manager.kinesis_data_stream_manager import (
+    KinesisDataStreamConnectorManager,
+)
 from spaceone.inventory.manager.msk_manager import MSKConnectorManager
-from spaceone.inventory.manager.kinesis_firehose_manager import KinesisFirehoseConnectorManager
+from spaceone.inventory.manager.kinesis_firehose_manager import (
+    KinesisFirehoseConnectorManager,
+)
 from spaceone.inventory.manager.lightsail_manager import LightsailConnectorManager
+from spaceone.inventory.manager.fsx_manager import FSXConnectorManager
